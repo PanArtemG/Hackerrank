@@ -18,12 +18,9 @@ import Foundation
  */
 
 func miniMaxSum(arr: [Int]) -> Void {
-    var sortedArray = arr
-    sortedArray.sort { $0 < $1 }
-    let minInt = sortedArray.first ?? 0
-    let maxInt = sortedArray.last ?? 0
-    
-    let sum = sortedArray.reduce(0, +)
+    let minInt = arr.min() ?? 0
+    let maxInt = arr.max() ?? 0
+    let sum = arr.reduce(0, +)
     let minSum = sum - maxInt
     let maxSum = sum - minInt
     
