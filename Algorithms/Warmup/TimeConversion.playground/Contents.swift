@@ -29,13 +29,13 @@ import Foundation
 
 func timeConversion(s: String) -> String {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "h:mm:ssa"
+    dateFormatter.dateFormat = "HH:MM:SSa"
     
     guard let date = dateFormatter.date(from: s) else {
         return ""
     }
-    dateFormatter.dateFormat = "HH:mm:ss"
+    dateFormatter.dateFormat = "HH:MM:SS"
     return dateFormatter.string(from: date)
 }
 
-timeConversion(s: "07:05:45AM")
+timeConversion(s: "07:07:45AM")
